@@ -1,3 +1,9 @@
-#hi{
-    color: orange;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Anton', sans-serif;
+}
+
+header img{
+    width: 100%;
 }

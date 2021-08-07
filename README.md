@@ -13,6 +13,9 @@ I will be documenting my progress on this Homework Assignment from start to fini
 ```` 
 I also want to have a unique background. Simple colors, but pleasing to look at. Okay. 
 
+### 6:20PM Quick Note
+I will begin this project by taking a mobile-first approch. Doing so will help me start simple and build on from there. 
+
 ### GOOD RESOURCES
 ---
 [MDN WEB DOCKS](https://developer.mozilla.org/en-US/ "MDN WEB DOCKS")

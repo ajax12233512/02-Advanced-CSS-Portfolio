@@ -238,6 +238,10 @@ body{
 
 @media screen and (min-width: 1200px){
 
+    section{
+        margin: 0em 5em;
+    }
+
     .main-container{
         box-sizing: border-box;
         margin: 1em auto;
@@ -253,10 +257,6 @@ body{
         max-width: 30%;
     }
 
-    #home{
-        
-    }
-
     #sectiontag{
         padding: 0;
         margin: 0 auto;
@@ -264,14 +264,14 @@ body{
 
     .grid{
         display: grid;
-        grid-template-rows: minmax(.4fr) minmax(.6fr);
-        grid-template-columns: minmax(.4fr) minmax(.6fr);
-        margin: 0em 5em 0em 5em;
+        grid-template-rows: 1fr minmax(200px, .7fr);
+        grid-template-columns: 1fr 1fr;
     }
 
     .flex{
         display: flex;
         box-sizing: border-box;
+        justify-content: space-evenly;
     }
 
     .flex-item{
@@ -310,9 +310,20 @@ body{
         padding: 0;
     }
 
-    #sectiontag{
-
-        
+    .projects-container .container{
+        width: 33%;
     }
+    /* .project-display-tip-calculator{
+        width: 33%;
+    }
+    
+    .project-display-javascript-calculator{
+        width: 33%;
+    }
+
+    .project-display-portfolio{
+        width: 33%;
+    } */
+    
 }
 

@@ -7,25 +7,133 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet"> 
     <title>NEIL JUANILLO | PORTFOLIO</title>
 </head>
 <body>
+    <div class="main-container">
+        <header>
+            <div class="header-container">
+                <div class="name">
+                    <h1>NEIL JUANILLO</h1>
+                </div>
+                <div class="self"></div>
+            </div>
+        </header>
 
-    <header>
-        <h1>NEIL JUANILLO</h1>
-        <img src="img/neil.jpg" alt="Neil Juanillo">
-    </header>
+        <nav>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#home"><button>HOME</button></a></li>
+                    <li><a href="#aboutme"><button>ABOUT ME</button></a></li>
+                    <li><a href="#projects"><button>PROJECTS</button></a></li>
+                    <li><a href="#contact"><button>CONTACT</button></a></li>
+                </ul>
+            </div>
+        </nav>
 
-    <nav>
-        <div class="nav-container">
-            <ul>
-                <li><a href="http://" target="_blank" rel="noopener noreferrer">HOME</a></li>
-                <li><a href="http://" target="_blank" rel="noopener noreferrer">ABOUT ME</a></li>
-                <li><a href="http://" target="_blank" rel="noopener noreferrer">PROJECT</a></li>
-                <li><a href="http://" target="_blank" rel="noopener noreferrer">CONTACT</a></li>
-            </ul>
-        </div>
-    </nav>
+        <section id="home">
+            <h2 id="sectiontag">Home</h2>
+
+            <div class="grid">
+                <div class="welcome container">
+                    <h2>Welcome</h2>
+
+                    <figure>
+                        <blockquote>
+                            <p>
+                                Wherever you fly, you'll be the best of the best. Wherever you go, you will top all the rest.
+                            </p>
+                        </blockquote>
+                        <figcaption>- Dr. Seuss'</figcaption>
+                    </figure>
+                    <p>
+                        Aspiring Front-End Designer. Hard Worker. Fast Learner. Create captivating and emmersive websites that connect with your clients. 
+                    </p>
+                </div>
+
+                <div class="artful-design container">
+                    <h2>Artful Design</h2>
+                    <p>
+                        The importance of a unique website has become more important now than ever. To connect with your client, you must be creative, unique, and captivating. The utility of an immersive webpage is essential.
+                    </p>
+                </div>
+
+                <div class="container mylinks">
+                    <h2>Let's Connect!</h2>
+
+                    <div class="flex"> 
+                        <div class="flex-item"> 
+                            <img src="img/GitHub-Mark-64px.png" alt="">
+                            <a href="#"><h3>Git Hub</h3></a>
+                        </div>
+                        <div class="flex-item">
+                            <img src="img/LI-In-Bug.png" alt="" srcset="">
+                            <a href="#"><h3>LinkedIn</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="aboutme">
+            <h2 id="sectiontag">About Me</h2>
+            <div class="aboutme-container"><!--This is a container class(Used for layout purposes and sizing into larger screen sizes), not meant to be confused with the .container rule in my CSS file; hence the dash(-)-->
+                <div class="bio container">
+                    <p>I was born in Dallas, Tx. I like to play violin, code, and read books. I speak Spanish and English and would want to become a Full Stack Web Devloper in the future.</p>
+                    <img src="img/dallasskyline.jpg" alt="Dallas, Tx">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 id="sectiontag">My Projects</h2>
+            <div class="projects-container"><!--This is a container class(Used for layout purposes and sizing into larger screen sizes), not meant to be confused with the .container rule in my CSS file; hence the dash(-)-->
+                <div class="container">
+                    <div class="project-display-tip-calculator">
+                        <h3>Tip Calculator</h2>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="project-display-javascript-calculator" >
+                        <h3>Javascript Calculator</h3>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="project-display-portfolio">
+                        <h3>Portfolio Draft</h3>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 id="sectiontag">Contact Info</h2>
+            <div class=" contact-info container ">
+                <h2>3512 Yale Dr. Denton, Tx</h2>
+                <div class="container">
+                    <h2>Email</h2>
+                    <p><a href="" type="email">neilj1213@outlook.com</a></p>
+                </div>
+                <div class="container">
+                    <h2>Git Hub</h2>
+                    <p><a href="https://github.com/ajax12233512">https://github.com/ajax12233512</a></p>
+                </div>
+                <div class="container">
+                    <h2>LinkedIn</h2>
+                    <p><a href="https://www.linkedin.com/in/neil-juanillo-93223620a/">https://www.linkedin.com/in/neil-juanillo-93223620a/</a></p>
+                </div>
+                <div class="container">
+                    <h2>Phone Number</h2>
+                    <p>972-352-1300</p>
+                </div>
+            </div>
+        </section>
+    <!--Finish up content for contact section. Make it responsive to desktop and ipad. Add gradient styles.-->
+    </div>
 </body>
 </html>

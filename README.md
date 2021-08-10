@@ -44,6 +44,21 @@ Okay so I got a fair bit into the portfolio. Since this morning I assisted a fel
 }
 ````
 
+### * Updated Class Container *
+
+````CSS
+.container{
+    background-color: grey;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 5%;/*Could be used for all subsquent containers*/
+    margin: 5%;
+    border: 2px solid white;
+    border-radius: 50px;
+    box-shadow: 10px 5px 1px white;
+}
+````
+
 This class will be used frequently throughout the html. Here I set the standard 'look' of every bit of infomation and text. I added a border and I also styled subsquent typographic parts. Upon further analysation, I could probably save lines of code by combining them some clever way. I'll save a copy of it here tho.
 
 ````CSS
@@ -175,3 +190,89 @@ One thing I'm proud of since starting is my background gradient affect on my pro
 ````
 
 It turned out really great and I'm happy with it. I'm really eager to add an animmation here where it zooms in on the background image slowly when you hover over it. I'll think about it. For now I need to finish up the contact section. 
+
+---
+
+## After class 8/9/21
+So I've put in some more styling stuff. Theres a couple things I added since last time I wrote into here. First. I gave the body a background gradient. Then I styled the containers a bit more with a box shadow effect. 
+
+For all the containers I added a transition that would change the background color of them in a hover state. I have this code in the middle of my style.css. I might try to figure out a way to merge the two rules together to save lines of code.
+
+````CSS
+.container:hover{
+    background-color: rgb(83, 27, 85);
+}
+
+.container{
+    transition-property: background-color;
+    transition-duration: .5s;
+    background-color: grey;
+}
+````
+
+
+After class, we learned about css variable. I have a few ideas on how to implement those. Having some variables in my code will help automate the process of trying out different color schemes. I'll think about that. 
+
+One thing that I also added is this animation here in the .artful-design class. This was supposed to be a test but I think I'll keep it. It displays the Michaelengelo quote when you hover over it. I'll probably use this same animation technique when making the zoom animation for the project image displays. 
+
+````CSS
+.artful-design:hover figure{
+    animation-name: showtext;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+  
+ .artful-design figure{
+    opacity: 0;
+}
+
+@keyframes showtext {
+    0%{opacity: 0;}
+    100%{opacity: 1;}    
+}
+````
+The figure <tag> in .artful-design starts out with an opacity of 0. After a second, it will increase the opacity to 1 over 1second. 
+
+## Just added the project background animation feature. It acutally wasnt all that hard. Honestly it was pretty easey
+
+````CSS
+/* Animation for project backgrounds */
+.project-animation:hover{
+    animation-name: zoom;
+    animation-duration: 10s;  
+    animation-timing-function: linear; 
+
+}
+
+@keyframes zoom{
+    0%{background-size: 400px;}
+    100%{background-size: 800px;}
+}
+/* ********************************* */
+````
+
+## Made Navbar sticky
+````HTML
+ <nav>
+            <div class="container nav-container">
+                <ul class="nav-links">
+                    <li><a href="#home"><button>HOME</button></a></li>
+                    <li><a href="#aboutme"><button>ABOUT ME</button></a></li>
+                    <li><a href="#projects"><button>PROJECTS</button></a></li>
+                    <li><a href="#contact"><button>CONTACT</button></a></li>
+                </ul>
+            </div>
+        </nav>
+````
+
+````CSS
+/* making navbar sticky */
+nav{
+    /* background: linear-gradient(to right, rgb(75,0,130), darkgrey); */
+    position: sticky;
+    top: 0;
+    display: block;
+    z-index: 1;
+
+}
+````

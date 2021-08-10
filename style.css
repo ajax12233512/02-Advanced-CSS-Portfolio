@@ -1,3 +1,7 @@
+:root{
+    --nav-color: yellow;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,9 +9,42 @@
 }
 
 body{
-    background-color: rgb(194, 188, 188);
+    background-image: linear-gradient(to right, rgb(75,0,130, .8), rgba(97, 96, 96, 0.8)), url(img/juarezbackround.jpg);
+    color: white;
 }
 
+.change-background{
+    transition-property: background-image;
+    transition-duration: 2s;
+    background-image: linear-gradient(to right, rgb(75,0,130, .8), rgba(97, 96, 96, 0.8)), url(img/dallasbackgroundskyline.jpg);
+}
+
+.change-background:hover{
+    background-image: linear-gradient(to right, rgb(75,0,130, .8), rgba(97, 96, 96, 0.8)), url(img/dallasbackgroundskyline.jpg);
+}
+
+
+/* .change-background{
+    animation-name: change-background;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+} */
+
+
+@keyframes change-background{
+    /* 0%{background: linear-gradient(to right, rgb(75,0,130, .8), rgba(97, 96, 96, 0.8)), url(img/notebookpaperbackground.jpg);} */
+    0%{background: linear-gradient(to right, rgb(75,0,130, .8), rgba(97, 96, 96, 0.8)), url(img/neil.jpg);}
+    25%{background: linear-gradient(to right, rgb(75,0,130, .8), rgba(97, 96, 96, 0.8)), url(img/dallasbackgroundskyline.jpg);}
+    50%{background: linear-gradient(to right, rgb(75,0,130, .8), rgba(97, 96, 96, 0.8)), url(img/violinbackgorund.jpg);}
+    75%{background: linear-gradient(to right, rgb(75,0,130, .8), rgba(97, 96, 96, 0.8)), url(img/juarezbackround.jpg);}
+    100%{background: linear-gradient(to right, rgb(75,0,130, .8), rgba(97, 96, 96, 0.8)), url(img/neil.jpg);}
+}
+
+a{
+    color: white;
+}
 
 #sectiontag{
     font-size: 2em;
@@ -23,7 +60,7 @@ body{
 .header-container{
     margin: 10% 20% 10% 20%;
     padding-bottom: 3em;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid white;
     overflow: hidden;
 }
 
@@ -43,7 +80,7 @@ body{
     margin: 0 auto;
     max-width: 375px;
     height: 280px;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 100%;
     background-image: url(img/neil-cropped.jpg);
     background-size: 200%;
@@ -52,9 +89,28 @@ body{
     background-position-y: center;
 }
 
+nav .container{
+    padding: 1em;
+}
+
 .nav-container{
-    padding-bottom: 1.5em;
-    border-bottom: 2px solid black;
+    box-sizing: border-box;
+    padding: 2em;
+    border: 2px solid var(--nav-color);
+    border-radius: 10px;
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+}
+
+/* making navbar sticky */
+nav{
+    /* background: linear-gradient(to right, rgb(75,0,130), darkgrey); */
+    position: sticky;
+    top: 0;
+    display: block;
+    z-index: 1;
+
 }
 
 .nav-links{
@@ -71,7 +127,15 @@ body{
     font-size: 1.1em;
     padding: .5em;
     background-color: rgb(94, 94, 94, .1);
+    border: 2px solid white;
+    color: white;
+}
+
+.nav-links li button:hover{
+    background-color: rgb(94, 94, 94, .1);
     border: 2px solid black;
+    color: white;
+    box-shadow: 5px 5px 20px 5px white;
 }
 
 .nav-links li button:active{
@@ -81,12 +145,19 @@ body{
 
 
 .container{
+    background-color: grey;
     box-sizing: border-box;
     text-align: center;
     padding: 5%;/*Could be used for all subsquent containers*/
     margin: 5%;
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 50px;
+    box-shadow: 10px 5px 1px white;
+}
+
+.container:hover{
+    box-shadow: 10px 5px 1px black;
+    border: 2px solid black;
 }
 
 .container figure{
@@ -124,6 +195,32 @@ body{
     font-size: 1.2em;
 }
 
+/* Going to try to make this animation in artful design part */
+
+.container:hover{
+    background-color: rgb(83, 27, 85);
+}
+
+.container{
+    transition-property: background-color;
+    transition-duration: .5s;
+    background-color: grey;
+}
+
+.artful-design:hover figure{
+    animation-name: showtext;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+  
+ .artful-design figure{
+    opacity: 0;
+}
+@keyframes showtext {
+    0%{opacity: 0;}
+    100%{opacity: 1;}    
+}
+
 .mylinks img{
     display: block;
     box-sizing: border-box;
@@ -149,6 +246,20 @@ body{
     padding: 5%;
     width: 100%;
 }
+
+/* Animation for project backgrounds */
+.project-animation:hover{
+    animation-name: zoom;
+    animation-duration: 10s;  
+    animation-timing-function: linear; 
+
+}
+
+@keyframes zoom{
+    0%{background-size: 400px;}
+    100%{background-size: 800px;}
+}
+/* ********************************* */
 
 .project-display-tip-calculator{
     background: linear-gradient(to right, rgb(29, 43, 100, .5), rgb(248, 205, 218, .5)), url(img/tipcalculator.jpg);
@@ -195,6 +306,11 @@ body{
 
 .contact-info{
     text-align: left;
+}
+
+.projects-container .container{
+    padding: 0;
+    overflow: hidden;
 }
 
 

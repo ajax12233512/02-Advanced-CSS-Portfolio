@@ -1,4 +1,4 @@
-# 02-Advanced-CSS-Portfolio
+# Portfolio
 Portfolio Website made in behalf of SMU
 
 ## 8/7/2021 6:00PM: Starting

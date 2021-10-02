@@ -264,6 +264,27 @@ nav{
 }
 
 /* Animation for project backgrounds */
+.repolink{
+    font-size: 1.5em;
+    color: white;
+    margin: 3% auto 0 auto;
+    display: none;
+
+}
+
+.repolink:hover{
+    border: 2px solid white;
+    border-radius: 1em;
+}
+
+.project-animation:hover .repolink{
+    display: inline;
+}
+
+.project-animation-featured:hover .repolink{
+    display: inline;
+}
+
 .project-animation:hover{
     animation-name: zoom;
     animation-duration: 10s;  
@@ -479,6 +500,12 @@ nav{
         max-width: 50%;
         max-height: 150px;
         margin: 0;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .repolink{
+        display: inline;
     }
 }
 
